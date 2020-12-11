@@ -1,62 +1,45 @@
-// const findBestEmployee = function(employees) {
-  
-// };
+const findBestEmployee = function (employees) {
+    let nameUser = '';
+    let maxScore = 0;
+    const keys = Object.keys(employees);
+    for (const key of keys) {
+
+        if (maxScore < employees[key]) {
+            maxScore = employees[key];
+            nameUser = key;
+        }
+    }
+    return nameUser;
+}
+console.log(
+  findBestEmployee({
+    ann: 29,
+    david: 35,
+    helen: 1,
+    lorence: 99,
+  }),
+);
 
 
-
-
-
- const obj ={
+console.log(
+  findBestEmployee({
     poly: 12,
     mango: 17,
     ajax: 4,
-}
-console.log(obj);
+  }),
+);
 
-const keys = Object.values(obj);
-
-for (const key of keys) {
-    console.log(key);
-    console.log(obj[values]);
-
-    // console.log(Math.max(obj[key]));
-}
-
-
+console.log(
+  findBestEmployee({
+    lux: 147,
+    david: 21,
+    kiwi: 19,
+    chelsy: 38,
+  }),
+);
 
 
 
-// for (const key of keys) {
-
-  
-//     // if (key > max) {
-//     //     max = key;
-//     //     continue;
-//     // }
-   
-// }
-
-// console.log(obj[max]);
 
 
-  
-// const keys = Object.values(obj);
-// console.log(keys);
-//  const num= Math.max(...keys);
-// console.log(num);
-
-    
-// let maxNumber;
-
-// for (let i = 0; i < keys.length; i += 1){
-//     console.log(keys[i])
-    // if (keys[i] > maxNumber); {
-    //     maxNumber = keys[i];
-        
-    // }   
-// }
-// console.log(maxNumber);
-
-
-// console.log(Math.max(...keys));
 

@@ -1,23 +1,24 @@
-const formatString = function(string) {
-    if (string.length <=  40) {
-        return string;
-    }
-    if (string.length > 40) {
-        
-        let compressedString = string.slice(0,40);
-        let compString = `${compressedString}...`;
-        return compString;
-    }
-
+const countTotalSalary = function(employees) {
+const keys = Object.values(employees);
+ let sum = 0;
+for (const key of keys) {
+  sum += key;
+  }
+  return sum;
 };
 
-console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
-console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
-console.log(formatString('Curabitur ligula sapien.'));
 console.log(
-  formatString(
-    'Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',
-  ),
+  countTotalSalary({
+    mango: 100,
+    poly: 150,
+    alfred: 80,
+  }),
 );
-
+console.log(
+  countTotalSalary({
+    kiwi: 200,
+    lux: 50,
+    chelsy: 150,
+  }),
+);
 
